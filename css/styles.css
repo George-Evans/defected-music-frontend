@@ -43,12 +43,26 @@ a {
   a:hover {
     color: #000; }
 
-nav, #blurb, .artist-name {
+h1, h2, nav, #blurb, .artist-name {
   font-family: "AvantGarde", "Helvetica Neue", Helvetica, sans-serif; }
 
-nav, #blurb, .artist-name {
+h1, h2, nav, #blurb, .artist-name {
   font-weight: 400;
   letter-spacing: 1px; }
+
+h1 {
+  font-size: 36px;
+  line-height: 29.9988px;
+  color: #000;
+  margin-top: 20px;
+  margin-bottom: 16px; }
+
+h2 {
+  font-size: 24px;
+  line-height: 24px;
+  color: #959698;
+  margin-top: 24px;
+  margin-bottom: 16px; }
 
 nav {
   font-size: 16px;
@@ -69,12 +83,12 @@ nav {
 .row {
   margin-left: -1px;
   margin-right: -1px; }
-
-.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
-  padding: 1px; }
+  .row > [class*='col-'] {
+    padding: 1px; }
 
 #content {
-  margin-top: 40px; }
+  margin-top: 40px;
+  margin-bottom: 40px; }
 
 .nav-link {
   padding-bottom: 0; }
@@ -86,6 +100,21 @@ nav {
   -ms-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+
+.breakout {
+  width: 100vw;
+  position: relative;
+  margin-left: -15px;
+  margin-right: -15px; }
+  .breakout img {
+    width: 100vw;
+    max-width: 100vw; }
+
+iframe {
+  height: 80px;
+  background: #959698;
+  width: 100vw;
+  max-width: 100vw; }
 
 /*/////////////////////////////////////
 	UI
@@ -100,13 +129,23 @@ nav {
 
 .nav-link {
   padding-top: 14px;
-  padding-left: 14px;
-  padding-right: 14px; }
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.socials {
+  height: 35px;
+  margin-bottom: 16px; }
+  .socials img {
+    padding-right: 4px; }
+    .socials img:hover {
+      -ms-transform: translateX(0) translateY(-1px);
+      -webkit-transform: translate(0, -1px);
+      transform: translate(0, -1px); }
 
 .twitter {
   margin-top: -2px; }
   .twitter img {
-    height: 12px; }
+    height: 14px; }
 
 .shim {
   background-color: #000;
@@ -140,14 +179,38 @@ nav {
     padding: 10px 15px 10px 10px; }
 
   nav {
-    font-size: 11px;
-    line-height: 11px; } }
+    font-size: 14px;
+    line-height: 14px; } }
 @media (min-width: 576px) {
   .container {
-    max-width: 90%; } }
+    max-width: 90%; }
+
+  .breakout {
+    width: 100%;
+    position: relative;
+    margin-left: 0;
+    margin-right: 0; }
+    .breakout img {
+      width: 100%;
+      max-width: 100%; }
+
+  iframe {
+    width: 100%;
+    max-width: 100%; } }
 @media (min-width: 767px) {
   .container {
     max-width: 720px; }
+
+  .row .col-left {
+    padding-left: 30px; }
+
+  iframe {
+    height: 315px; }
+
+  h1 {
+    font-size: 48px;
+    line-height: 39.9984px;
+    margin-top: 2px; }
 
   #blurb {
     font-size: 24px;
@@ -157,12 +220,12 @@ nav {
   .container {
     max-width: 960px; }
 
-  .twitter {
-    padding-right: 0; }
-
   .artist-name {
     font-size: 24px;
-    line-height: 24px; } }
+    line-height: 24px; }
+
+  h1 {
+    margin-right: 30%; } }
 @media (min-width: 1200px) {
     /*/////////////////////////////////////
 	Layout
@@ -171,7 +234,8 @@ nav {
     max-width: 1140px; }
 
   #content {
-    margin-top: 100px; }
+    margin-top: 100px;
+    margin-bottom: 100px; }
 
   nav {
     font-size: 24px;
@@ -181,7 +245,9 @@ nav {
   /*/////////////////////////////////////
       UI
   /////////////////////////////////////*/
-  .twitter img {
-    height: 22px; } }
+  .twitter {
+    padding-right: 0; }
+    .twitter img {
+      height: 22px; } }
 
 /*# sourceMappingURL=styles.css.map */
