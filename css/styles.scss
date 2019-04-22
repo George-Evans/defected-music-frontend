@@ -261,6 +261,13 @@ iframe {
     }
 }
 
+.about-img {
+    height: 460px;
+    background-image: url(../img/about.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
 
 
 // Extra Small Phones
@@ -350,6 +357,10 @@ iframe {
         margin-right: 30%;
     }
 
+    nav {
+        margin-bottom: 40px;
+    }
+
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -372,7 +383,6 @@ iframe {
     nav {
         font-size: $sub-heading;
         line-height: $sub-heading;
-        margin-bottom: 40px;
     }
 
     /*/////////////////////////////////////
